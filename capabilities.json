@@ -1,0 +1,83 @@
+{
+    "dataBinding": {
+        "dataRoles": [
+            {
+                "name": "values",
+                "displayNameKey": "Values",
+                "kind": "value"
+            },
+            {
+                "name": "legend",
+                "displayNameKey": "Legend",
+                "kind": "grouping"
+            }
+        ],
+        "dataViewMappings": [
+            {
+                "plain": {
+                    "required": [
+                        {
+                            "values": {
+                                "min": 1
+                            },
+                            "legend": {
+                                "min": 1
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "options": {
+        "visual": [
+            {
+                "displayName": "ECharts Style",
+                "properties": [
+                    {
+                        "name": "enableAnimation",
+                        "type": "Boolean",
+                        "displayName": "Enable Animation",
+                        "defaultValue": true
+                    },
+                    {
+                        "name": "palette",
+                        "type": "Palette",
+                        "displayName": "Palette",
+                        "inheritFrom": "dashboard.palette"
+                    },
+                    {
+                        "name": "textStyle",
+                        "type": "TextStyle",
+                        "displayName": "Text Style",
+                        "inheritFrom": "dashboard.textStyle"
+                    },
+                    {
+                        "name": "chartType",
+                        "type": "Enum",
+                        "items": [{
+                            "value": "bar",
+                            "displayName": "Bar Chart"
+                        }, {
+                            "value": "line",
+                            "displayName": "Line Chart"
+                        }],
+                        "defaultValue": "bar"
+                    }
+                ]
+            }, {
+                "type": "title"
+            }, {
+                "type": "interaction"
+            }
+        ]
+    },
+    "actions": [{
+        "type": "focus"
+    }, {
+        "type": "filter"
+    }, {
+        "type": "rank"
+    }],
+    "analysis": []
+}
